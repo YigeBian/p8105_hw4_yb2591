@@ -14,27 +14,51 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+```{r}
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec |> 
+  select(
+    boro, inspection_date, cuisine_description, score, street, zipcode, grade) |>
+    arrange(inspection_date) |>
+  filter(
+    !is.na(score),
+    cuisine_description %in% c("Egyptian", "Italian", "Indian", "Thai", "African", "Korean", "Chinese", "Australian", "Russian"),
+    boro == "MANHATTAN")
+```
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Inspection scores for select cuisines 
 
 ```{r}
-
+rest_inspec |> 
+  mutate(cuisine_description = fct_reorder(cuisine_description, score)) |> 
+  plot_ly(y = ~score, color = ~cuisine_description, type = "box", colors = "viridis")
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
-
+### Number of restaurant for select cuisine
 ```{r}
-
+rest_inspec |> 
+  count(cuisine_description) |> 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) |> 
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis")
 ```
 
-### Chart C
+### Average score for select cuisine in each zipcode
 
 ```{r}
-
+rest_inspec |>
+  filter(cuisine_description %in% c("Italian", "Chinese"),
+         zipcode %in% 10001:10040) |>
+  mutate(zipcode=as.character(zipcode)) |>
+  group_by(zipcode, cuisine_description) |>
+  summarize(mean_score = mean(score)) |>
+  plot_ly(
+    x = ~zipcode, y = ~mean_score, color = ~cuisine_description, type = "scatter", mode = "markers", colors = "viridis")
 ```
-
