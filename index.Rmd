@@ -7,3 +7,8 @@ output:
 ---
 
 # This is Yige Bian's website for p8105 hw4
+![](image/cumc.png)
+
+## Links
+* [p8105 web](https://p8105.com/index.html) 
+* [h24 desc](https://p8105.com/homework_4.html)
