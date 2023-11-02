@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-![](image/cumc.jpg)
+![](image/CUMC.jpg)
 
 ## Contents
 **This is Yige Bian's website for p8105 hw4. The website covers the resume, networks links of Yige, and a flexdashboard for **[Problem 2](problem2.html)
