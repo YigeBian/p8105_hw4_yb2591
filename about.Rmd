@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+### About this site
+
+This is the website for p8105 homework 4. The website contains the brief resume, email, github, and linkedin of the author, Yige Bian.
