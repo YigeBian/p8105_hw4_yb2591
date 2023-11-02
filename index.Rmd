@@ -6,8 +6,9 @@ output:
     toc_float: true
 ---
 
-# This is Yige Bian's website for p8105 hw4
 ![](image/cumc.png)
+
+**This is Yige Bian's website for p8105 hw4. The website covers the resume, networks links of Yige, and a flexdashboard for ** 
 
 ## Links
 * [p8105 web](https://p8105.com/index.html) 
