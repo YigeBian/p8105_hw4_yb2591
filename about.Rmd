@@ -4,4 +4,8 @@ title: "About"
 
 ### About this site
 
-This is the website for p8105 homework 4. The website contains the brief resume, email, github, and linkedin of the author, Yige Bian.
+This is the website for p8105 homework 4. The website contains
+
+Problem 1: The development of website, the brief resume, network links (email, github, and linkedin) of the author.
+
+Problem 2: Data analysis of dataset "NYC Restaurant Inspections". Three plots are drwan, 1. boxplot which describes Inspection scores for select cuisines; 2. bar plot which show the Number of restaurant for select cuisine; 3. scatter plot which compare the average score for select cuisine in each zipcode.
